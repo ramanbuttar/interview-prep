@@ -18,6 +18,6 @@ class LongestConsecutiveCharacter
       previous_char = char
     end
 
-    hash.max_by{|k, v| v}
+    hash.max_by{|_k, v| v}
   end
 end

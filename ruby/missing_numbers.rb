@@ -3,7 +3,6 @@ class MissingNumbers
     ranges = []
     prev_num = list[0]
     list.each do |num|
-      range = []
       if num - prev_num == 2
         ranges << num - 1
       elsif num - prev_num > 2

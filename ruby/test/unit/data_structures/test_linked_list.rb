@@ -1,4 +1,4 @@
-require_relative '../../linked_list'
+require_relative '../../../data_structures/linked_list'
 require 'test/unit'
 
 class TestLinkedList < Test::Unit::TestCase

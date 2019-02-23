@@ -4,6 +4,6 @@ class FrequentInteger
     list.each do |num|
       hash[num] += 1
     end
-    hash.max_by{|k, v| v}.first
+    hash.max_by{|_k, v| v}.first
   end
 end

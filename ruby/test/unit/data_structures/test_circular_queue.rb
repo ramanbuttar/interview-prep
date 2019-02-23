@@ -1,4 +1,4 @@
-require_relative '../../circular_queue'
+require_relative '../../../data_structures/circular_queue'
 require 'test/unit'
 
 class TestCircularQueue < Test::Unit::TestCase

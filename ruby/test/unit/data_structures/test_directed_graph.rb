@@ -1,4 +1,4 @@
-require_relative '../../directed_graph'
+require_relative '../../../data_structures/directed_graph'
 require 'test/unit'
 
 class TestDirectedGraph < Test::Unit::TestCase
