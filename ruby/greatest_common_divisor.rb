@@ -1,7 +1,7 @@
 class GreatestCommonDivisor
-  def run(arr)
+  def run(list)
     map = {}
-    arr.each do |n|
+    list.each do |n|
       map[n] = divisors(n)
     end
     map.values.inject(:&).max

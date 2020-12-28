@@ -1,9 +1,9 @@
 class StackMachine
 
-  def run(s)
+  def run(string)
     stack = []
 
-    s.split('').each do |char|
+    string.chars.each do |char|
       if numeric?(char)
         # [0..9]
         num = char.to_i

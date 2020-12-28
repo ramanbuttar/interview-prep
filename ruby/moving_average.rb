@@ -1,9 +1,9 @@
 class MovingAverage
-  def run(integers, n)
+  def run(list, n)
     result = []
     window = []
 
-    integers.each do |num|
+    list.each do |num|
       window.push(num)
 
       if window.size == n

@@ -1,6 +1,6 @@
 class Flatten
-  def run(array, output =[])
-    array.each do |item|
+  def run(list, output=[])
+    list.each do |item|
       if item.is_a?(Array)
         run(item, output)
       else

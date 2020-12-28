@@ -8,7 +8,9 @@ class Map
     @map = Array.new(size)
   end
 
-  def neighbouring_paths(row, col)
+  def neighbouring_paths(coordinates)
+    row = coordinates.first
+    col = coordinates.last
     up = validate(row, col - 1)
     down = validate(row, col + 1)
     left = validate(row - 1, col)
@@ -46,7 +48,7 @@ class ShortestPath
 
   def find(start, finish)
     visited = [start]
-    queue = @map.neighbouring_paths(start.first, start.last)
+    queue = @map.neighbouring_paths(start)
     path = [start]
 
     while queue.any?
@@ -60,7 +62,7 @@ class ShortestPath
       unless visited.include?(location)
         visited << location
         path << location
-        queue += @map.neighbouring_paths(location.first, location.last)
+        queue += @map.neighbouring_paths(location)
         queue.uniq!
       end
     end

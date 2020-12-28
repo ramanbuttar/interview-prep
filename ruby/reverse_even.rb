@@ -1,21 +1,21 @@
 class ReverseEven
-  def run(str)
+  def run(string)
     front = nil
     back = nil
 
-    str.size.times do |i|
-      if front.nil? && str[i].to_i % 2 == 0
+    string.size.times do |i|
+      if front.nil? && string[i].to_i % 2 == 0
         front = i
       end
-      if back.nil? && str[str.size - i - 1].to_i % 2 == 0
-        back = str.size - i - 1
+      if back.nil? && string[string.size - i - 1].to_i % 2 == 0
+        back = string.size - i - 1
       end
       if front && back && front < back
-        str[front], str[back] = str[back], str[front]
+        string[front], string[back] = string[back], string[front]
         front = nil
         back = nil
       end
     end
-    str
+    string
   end
 end

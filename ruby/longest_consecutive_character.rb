@@ -1,10 +1,10 @@
 class LongestConsecutiveCharacter
-  def run(str)
+  def run(string)
     hash = {}
-    previous_char = str[0]
+    previous_char = string[0]
     streak = 0
 
-    str.split('').each do |char|
+    string.chars.each do |char|
       if previous_char == char
         streak += 1
       else

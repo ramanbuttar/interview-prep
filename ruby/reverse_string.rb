@@ -1,18 +1,24 @@
+class ReverseString
+  def run(list)
+    (list.length / 2).times do |i|
+      list[i], list[-i-1] = list[-i-1], list[i]
+    end
+    list
+  end
+end
+
 class String
   def reverse_entire!
-    half_length = self.length / 2
-    half_length.times do |i|
-      self[i], self[-i-1] = self[-i-1], self[i]
-    end
-    self
+    separator = ''
+    list = self.split(separator)
+    reversed_list = ReverseString.new.run(list)
+    reversed_list.join(separator)
   end
 
   def reverse_words!
-    words = self.split(' ')
-    half_count = words.count / 2
-    half_count.times do |i|
-      words[i], words[-i-1] = words[-i-1], words[i]
-    end
-    words.join(' ')
+    separator = ' '
+    list = self.split(separator)
+    reversed_list = ReverseString.new.run(list)
+    reversed_list.join(separator)
   end
 end
